@@ -49,6 +49,9 @@ public class CustomGitInformation implements InfoContributor {
     @Value("${git.remote.origin.url}")
     private String commitURL;
 
+    @Value("${git.total.commit.count}")
+    private int commitCount;
+
     @Override
     public void contribute(Info.Builder builder) {
 
@@ -64,6 +67,7 @@ public class CustomGitInformation implements InfoContributor {
         gitInfo.put("CommitUserName", commitUserName);
         gitInfo.put("CommitTime", commitTime);
         gitInfo.put("CommitURL", commitURL);
+        gitInfo.put("commitCount",commitCount);
         builder.withDetail("Git commit Info", gitInfo);
     }
 }
