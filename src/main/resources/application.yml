@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Hotel Reservation System
+
+info:
+  application:
+    name: ${spring.application.name}
+    description: Hotel Reservation System
+    version: '@project.version@'
+    spring-cloud-version: '@spring-cloud.version@'
+    spring-boot-version: '@project.parent.version@'
